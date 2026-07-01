@@ -2120,7 +2120,6 @@ with technical_tab:
     <h4>Machine Learning Models Evaluated</h4>
     <ul>
         <li>Logistic Regression</li>
-        <li>Linear Support Vector Machine</li>
         <li>Bernoulli Naive Bayes</li>
         <li>k-Nearest Neighbors</li>
         <li>XGBoost</li>
