@@ -1,0 +1,3 @@
+split,accuracy,f1_weighted,f1_macro,model,best_alpha
+validation,0.9010794896957802,0.9016078638191503,0.9010105121433503,Final Bernoulli Naive Bayes for App,0.3496497517041572
+final_test,0.8959832526494832,0.8965916182606869,0.8961918018762672,Final Bernoulli Naive Bayes for App,0.3496497517041572
