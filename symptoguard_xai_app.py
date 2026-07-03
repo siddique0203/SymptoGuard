@@ -56,7 +56,7 @@ DATA_PATH = DATA_DIR / "100_Disease.csv"
 # ─────────────────────────────────────────────
 TEAM_MEMBERS = [
     {
-        "name": "Md. Abu Bakar Siddique",
+        "name": "Md Abu Bakar Siddique",
         "email": "siddique0203@gmail.com",
         "image": "abu_bakar.jpg",
         "role": "Researcher & Developer",
@@ -71,13 +71,13 @@ TEAM_MEMBERS = [
         "name": "Saifullah Saif",
         "email": "saifullahsaif4797@gmail.com",
         "image": "saif.jpg",
-        "role": "Researcher & Developer",
+        "role": "Researcher",
     },
     {
         "name": "Fysal Sheikh Sheiba",
         "email": "fyshalsheiba@gmail.com",
         "image": "fysal.jpg",
-        "role": "Researcher & Developer",
+        "role": "Researcher",
     },
 ]
 
@@ -1332,6 +1332,69 @@ st.markdown(
         }
     }
 
+
+    /* ─────────────────────────────────────────────
+       Clean professional CTA button
+       Keep this block at the very end so it overrides earlier button CSS.
+    ───────────────────────────────────────────── */
+    .cta-hint {
+        text-align: center;
+        color: #334155;
+        font-size: 0.95rem;
+        font-weight: 800;
+        margin-bottom: 0.45rem;
+        letter-spacing: -0.01em;
+    }
+
+    /* This targets the Streamlit primary action button. */
+    .stButton > button {
+        background: linear-gradient(135deg, #0284c7 0%, #0f766e 100%) !important;
+        color: #ffffff !important;
+        border: 1px solid rgba(15, 118, 110, 0.35) !important;
+        border-radius: 14px !important;
+        padding: 1.05rem 1.35rem !important;
+        font-size: 1.12rem !important;
+        font-weight: 900 !important;
+        letter-spacing: -0.01em !important;
+        min-height: 4.05rem !important;
+        width: 100% !important;
+        box-shadow: 0 12px 28px rgba(2, 132, 199, 0.24) !important;
+        transform: none !important;
+        transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease !important;
+        animation: none !important;
+    }
+
+    .stButton > button:hover {
+        color: #ffffff !important;
+        border: 1px solid rgba(15, 118, 110, 0.45) !important;
+        transform: translateY(-2px) !important;
+        filter: brightness(1.04) !important;
+        box-shadow: 0 16px 34px rgba(2, 132, 199, 0.30) !important;
+    }
+
+    .stButton > button:active {
+        transform: translateY(0) scale(0.99) !important;
+        box-shadow: 0 10px 22px rgba(2, 132, 199, 0.22) !important;
+    }
+
+    .stButton > button:focus {
+        outline: 3px solid rgba(14, 165, 233, 0.22) !important;
+        outline-offset: 3px !important;
+    }
+
+    @media (max-width: 768px) {
+        .stButton > button {
+            font-size: 1rem !important;
+            min-height: 3.8rem !important;
+            padding: 0.95rem 1.05rem !important;
+            border-radius: 13px !important;
+        }
+
+        .cta-hint {
+            font-size: 0.86rem !important;
+        }
+    }
+
 </style>
 """,
     unsafe_allow_html=True,
@@ -1626,7 +1689,7 @@ st.markdown('<div id="home"></div>', unsafe_allow_html=True)
 st.markdown(
     """
 <div class="hero">
-    <div class="hero-badge">Updated 70/15/15 model · Preliminary health screening · Built for easy use</div>
+    <div class="hero-badge">Preliminary health screening · Built for easy use</div>
     <h1>Understand possible health conditions from symptoms.</h1>
     <p>
         SymptoGuard helps users select symptoms, view possible condition matches, and understand
@@ -1758,7 +1821,7 @@ with st.container(border=True):
     else:
         st.caption("No symptoms selected yet.")
 
-    control_col_1, control_col_2, control_col_3 = st.columns([1, 1, 1])
+    control_col_1, control_col_2, control_col_3 = st.columns([0.85, 0.85, 1.65])
 
     with control_col_1:
         top_n = st.slider(
@@ -1775,8 +1838,7 @@ with st.container(border=True):
         )
 
     with control_col_3:
-        st.write("")
-        st.write("")
+        
         predict_btn = st.button(
             "Check Possible Conditions  →",
             type="primary",
