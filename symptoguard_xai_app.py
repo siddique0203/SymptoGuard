@@ -1854,10 +1854,7 @@ with st.container(border=True):
         )
 
     with control_col_3:
-        st.markdown(
-            '<div class="cta-hint">Click after selecting symptoms</div>',
-            unsafe_allow_html=True,
-        )
+       
         predict_btn = st.button(
             "Check Possible Conditions →",
             type="primary",
