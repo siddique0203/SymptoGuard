@@ -56,7 +56,7 @@ DATA_PATH = DATA_DIR / "100_Disease.csv"
 # ─────────────────────────────────────────────
 TEAM_MEMBERS = [
     {
-        "name": "Md Abu Bakar Siddique",
+        "name": "Md. Abu Bakar Siddique",
         "email": "siddique0203@gmail.com",
         "image": "abu_bakar.jpg",
         "role": "Researcher & Developer",
@@ -71,13 +71,13 @@ TEAM_MEMBERS = [
         "name": "Saifullah Saif",
         "email": "saifullahsaif4797@gmail.com",
         "image": "saif.jpg",
-        "role": "Researcher",
+        "role": "Researcher & Developer",
     },
     {
         "name": "Fysal Sheikh Sheiba",
         "email": "fyshalsheiba@gmail.com",
         "image": "fysal.jpg",
-        "role": "Researcher",
+        "role": "Researcher & Developer",
     },
 ]
 
@@ -1352,16 +1352,25 @@ st.markdown(
         color: #ffffff !important;
         border: 1px solid rgba(15, 118, 110, 0.35) !important;
         border-radius: 14px !important;
-        padding: 1.05rem 1.35rem !important;
-        font-size: 1.12rem !important;
-        font-weight: 900 !important;
-        letter-spacing: -0.01em !important;
-        min-height: 4.05rem !important;
+        padding: 1.15rem 1.45rem !important;
+        font-size: 1.48rem !important;
+        font-weight: 950 !important;
+        letter-spacing: -0.02em !important;
+        line-height: 1.2 !important;
+        min-height: 4.35rem !important;
         width: 100% !important;
         box-shadow: 0 12px 28px rgba(2, 132, 199, 0.24) !important;
         transform: none !important;
         transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease !important;
         animation: none !important;
+    }
+
+    /* Streamlit often wraps button text inside p/span, so target them too. */
+    .stButton > button p,
+    .stButton > button span {
+        font-size: 1.48rem !important;
+        font-weight: 950 !important;
+        line-height: 1.2 !important;
     }
 
     .stButton > button:hover {
@@ -1384,10 +1393,17 @@ st.markdown(
 
     @media (max-width: 768px) {
         .stButton > button {
-            font-size: 1rem !important;
-            min-height: 3.8rem !important;
-            padding: 0.95rem 1.05rem !important;
+            font-size: 1.22rem !important;
+            min-height: 4rem !important;
+            padding: 1rem 1.05rem !important;
             border-radius: 13px !important;
+        }
+
+        .stButton > button p,
+        .stButton > button span {
+            font-size: 1.22rem !important;
+            font-weight: 950 !important;
+            line-height: 1.2 !important;
         }
 
         .cta-hint {
@@ -1838,9 +1854,12 @@ with st.container(border=True):
         )
 
     with control_col_3:
-        
+        st.markdown(
+            '<div class="cta-hint">Click after selecting symptoms</div>',
+            unsafe_allow_html=True,
+        )
         predict_btn = st.button(
-            "Check Possible Conditions  →",
+            "Check Possible Conditions →",
             type="primary",
             use_container_width=True,
         )
