@@ -56,7 +56,7 @@ DATA_PATH = DATA_DIR / "100_Disease.csv"
 # ─────────────────────────────────────────────
 TEAM_MEMBERS = [
     {
-        "name": "Md. Abu Bakar Siddique",
+        "name": "Md Abu Bakar Siddique",
         "email": "siddique0203@gmail.com",
         "image": "abu_bakar.jpg",
         "role": "Researcher & Developer",
@@ -71,13 +71,13 @@ TEAM_MEMBERS = [
         "name": "Saifullah Saif",
         "email": "saifullahsaif4797@gmail.com",
         "image": "saif.jpg",
-        "role": "Researcher & Developer",
+        "role": "Researcher",
     },
     {
         "name": "Fysal Sheikh Sheiba",
         "email": "fyshalsheiba@gmail.com",
         "image": "fysal.jpg",
-        "role": "Researcher & Developer",
+        "role": "Researcher",
     },
 ]
 
