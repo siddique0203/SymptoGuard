@@ -2231,7 +2231,7 @@ st.markdown(
     """
 <div class="footer">
     SymptoGuard · AI-assisted symptom checker · Academic research prototype<br>
-    Built for preliminary screening, health awareness, and thesis demonstration.
+    Built for preliminary screening, and health awareness.
 </div>
 """,
     unsafe_allow_html=True,
