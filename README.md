@@ -1,6 +1,4 @@
-Here's an improved version with the **website link** included in the appropriate sections.
 
----
 
 # SymptoGuard: An Explainable Machine Learning Framework for Multiclass Disease Diagnosis
 
@@ -10,7 +8,7 @@ Here's an improved version with the **website link** included in the appropriate
 
 🌐 **Live Demo:** [https://symptoguard.streamlit.app/](https://symptoguard.streamlit.app/)
 
----
+
 
 ## What is SymptoGuard?
 
@@ -22,7 +20,7 @@ Users can access the deployed application online to explore symptom-based diseas
 
 **🔗 Website:** [https://symptoguard.streamlit.app/](https://symptoguard.streamlit.app/)
 
----
+
 
 ## How Does It Work?
 
@@ -37,7 +35,7 @@ The framework follows a complete machine learning pipeline:
 * Generates SHAP-based explanations to show how each symptom contributed to the prediction.
 * Displays results through the interactive Streamlit web application.
 
----
+
 
 ## Key Features
 
@@ -53,7 +51,7 @@ The framework follows a complete machine learning pipeline:
 * Real-time disease prediction with confidence information.
 * User-friendly web deployment accessible from any modern browser.
 
----
+
 
 ## Technologies Used
 
@@ -69,7 +67,7 @@ The framework follows a complete machine learning pipeline:
 * LightGBM
 * Matplotlib
 
----
+
 
 ## Performance
 
@@ -81,7 +79,7 @@ The final optimized **Bernoulli Naive Bayes** model achieved:
 
 Among all evaluated models, it provided the best balance between prediction accuracy, computational efficiency, and interpretability.
 
----
+
 
 ## Repository Contents
 
@@ -95,7 +93,7 @@ This repository includes:
 * Streamlit web application
 * Documentation and reproducible research workflow
 
----
+
 
 ## Web Application
 
@@ -111,7 +109,7 @@ The application allows users to:
 * Understand the prediction through SHAP-based feature explanations.
 * Explore an explainable AI-powered healthcare decision-support prototype.
 
----
+
 
 ## Applications
 
@@ -126,7 +124,7 @@ SymptoGuard can be used for:
 
 > **Note:** This project is intended for research and educational purposes only and should not be used as a substitute for professional medical diagnosis.
 
----
+
 
 ## Future Work
 
@@ -143,7 +141,7 @@ Several improvements can further enhance the framework:
 * Evaluate the framework in real clinical environments with healthcare professionals.
 * Deploy the system as a cloud-based clinical decision-support platform.
 
----
+
 
 ## Conclusion
 
