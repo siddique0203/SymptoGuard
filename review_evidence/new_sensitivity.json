@@ -1,0 +1,26 @@
+{
+  "scope": "NEW SENSITIVITY TEST ON PROCESSED DATA; NOT ORIGINAL PUBLISHED PARTITIONS",
+  "model": "BernoulliNB",
+  "alpha": 0.3497,
+  "stratified_split": "70/15/15 using two calls to train_test_split, random_state=42",
+  "baseline_fresh_split": {
+    "rows": 101903,
+    "train_rows": 71332,
+    "validation_rows": 15285,
+    "test_rows": 15286,
+    "test_accuracy_percent": 89.5983,
+    "test_weighted_f1_percent": 89.6592,
+    "test_macro_f1_percent": 89.6192
+  },
+  "after_exact_dedup_fresh_split": {
+    "rows": 96035,
+    "train_rows": 67224,
+    "validation_rows": 14405,
+    "test_rows": 14406,
+    "test_accuracy_percent": 89.6779,
+    "test_weighted_f1_percent": 89.7277,
+    "test_macro_f1_percent": 89.6089
+  },
+  "removed_exact_duplicate_rows": 5868,
+  "interpretation_warning": "Different data subsets and re-splitting; difference cannot be attributed solely to leakage; do not quote as original model accuracy."
+}

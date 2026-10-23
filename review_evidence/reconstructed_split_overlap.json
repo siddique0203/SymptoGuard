@@ -1,0 +1,30 @@
+{
+  "scope": "RECONSTRUCTED SENSITIVITY SPLIT",
+  "original_published_split_verified": false,
+  "partition_sizes": {
+    "train": 71332,
+    "validation": 15285,
+    "test": 15286
+  },
+  "test_vs_train": {
+    "source_records": 15286,
+    "exact_symptom_vector_overlap": 2232,
+    "exact_symptom_label_overlap": 1196,
+    "near_only_distance_one_overlap": 12670,
+    "exact_vector_overlap_percent": 14.6016
+  },
+  "validation_vs_train": {
+    "source_records": 15285,
+    "exact_symptom_vector_overlap": 2233,
+    "exact_symptom_label_overlap": 1257,
+    "near_only_distance_one_overlap": 12674,
+    "exact_vector_overlap_percent": 14.6091
+  },
+  "test_vs_validation": {
+    "source_records": 15286,
+    "exact_symptom_vector_overlap": 541,
+    "exact_symptom_label_overlap": 256,
+    "near_only_distance_one_overlap": 8481,
+    "exact_vector_overlap_percent": 3.5392
+  }
+}

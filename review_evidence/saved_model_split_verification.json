@@ -1,0 +1,84 @@
+{
+  "source_zip": "SymptoGuard-main_4.zip",
+  "rows": 101903,
+  "classes": 100,
+  "features": 227,
+  "saved_alpha": 0.3496497517041572,
+  "reconstructed_partition_sizes": {
+    "train": 71332,
+    "validation": 15285,
+    "test": 15286
+  },
+  "model_class_counts_exact_match": true,
+  "model_22700_feature_counts_exact_match": true,
+  "refit_feature_counts_exact_match": true,
+  "metrics": {
+    "validation": {
+      "computed": {
+        "accuracy": 0.9010794896957802,
+        "f1_weighted": 0.9016078638191503,
+        "f1_macro": 0.9010105121433503
+      },
+      "saved_csv": {
+        "accuracy": 0.9010794896957802,
+        "f1_weighted": 0.9016078638191504,
+        "f1_macro": 0.9010105121433504
+      },
+      "all_metrics_match": true,
+      "saved_vs_refit_predictions_identical": true
+    },
+    "final_test": {
+      "computed": {
+        "accuracy": 0.8959832526494832,
+        "f1_weighted": 0.8965916182606869,
+        "f1_macro": 0.8961918018762672
+      },
+      "saved_csv": {
+        "accuracy": 0.8959832526494832,
+        "f1_weighted": 0.8965916182606869,
+        "f1_macro": 0.8961918018762672
+      },
+      "all_metrics_match": true,
+      "saved_vs_refit_predictions_identical": true
+    }
+  },
+  "historical_row_membership_proven": false,
+  "interpretation": "The stored BernoulliNB sufficient statistics and saved validation/test metrics match the reconstructed split exactly. Original row IDs were not retained.",
+  "reconstructed_overlap": {
+    "test_vs_train": {
+      "source_records": 15286,
+      "exact_vector_rows": 2232,
+      "exact_vector_and_label_rows": 1196,
+      "distance_one_only_rows": 12670,
+      "exact_vector_percent": 14.601596231846134
+    },
+    "validation_vs_train": {
+      "source_records": 15285,
+      "exact_vector_rows": 2233,
+      "exact_vector_and_label_rows": 1257,
+      "distance_one_only_rows": 12674,
+      "exact_vector_percent": 14.609093882891724
+    },
+    "test_vs_validation": {
+      "source_records": 15286,
+      "exact_vector_rows": 541,
+      "exact_vector_and_label_rows": 256,
+      "distance_one_only_rows": 8481,
+      "exact_vector_percent": 3.539186183435824
+    }
+  },
+  "classwise": {
+    "min_f1": 0.6412698412698413,
+    "median_f1": 0.9297402597402598,
+    "classes_below_80_f1": 18,
+    "test_errors": 1590
+  },
+  "optional_svm_paired_comparison": {
+    "reconstructed_svm_accuracy": 0.8935627371451,
+    "archived_svm_accuracy": 0.8935627371451,
+    "matches_archived_accuracy": true,
+    "bnb_only_correct": 370,
+    "svm_only_correct": 333,
+    "exact_mcnemar_p": 0.17449499402639065
+  }
+}
