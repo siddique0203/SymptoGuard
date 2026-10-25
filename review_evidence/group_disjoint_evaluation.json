@@ -1,0 +1,79 @@
+{
+  "scope": "POST HOC symptom-vector-group-disjoint evaluation on processed synthetic data; NOT the historical test partition",
+  "source_zip": "SymptoGuard-main_4.zip",
+  "processed_dataset_sha256": "b1dd77ef652e7a75f391123c5802303c9100bfa179d814384f29cd3a3698f5fc",
+  "source_rows": 101903,
+  "classes": 100,
+  "features": 227,
+  "frozen_model": "BernoulliNB",
+  "frozen_alpha": 0.3496497517041572,
+  "split_procedure": "Two GroupShuffleSplit calls (test group fraction 0.15, then validation fraction 0.15/0.85 of remaining groups); not exactly stratified by record-level disease labels",
+  "random_states": {
+    "outer": 42,
+    "inner": 43
+  },
+  "no_hyperparameter_tuning_on_new_test": true,
+  "no_cross_partition_identical_feature_vectors": true,
+  "overlap_unique_vector_counts": {
+    "train_vs_validation": 0,
+    "train_vs_test": 0,
+    "validation_vs_test": 0
+  },
+  "metrics": {
+    "train": {
+      "rows": 71386,
+      "accuracy_percent": 90.25999,
+      "weighted_f1_percent": 90.32705,
+      "macro_f1_percent": 90.29151,
+      "disease_classes_present": 100,
+      "unique_feature_vectors": 63807
+    },
+    "validation": {
+      "rows": 15268,
+      "accuracy_percent": 90.05109,
+      "weighted_f1_percent": 90.08355,
+      "macro_f1_percent": 90.01705,
+      "disease_classes_present": 100,
+      "unique_feature_vectors": 13674
+    },
+    "test": {
+      "rows": 15249,
+      "accuracy_percent": 89.67801,
+      "weighted_f1_percent": 89.73684,
+      "macro_f1_percent": 89.63933,
+      "disease_classes_present": 100,
+      "unique_feature_vectors": 13674
+    }
+  },
+  "class_balance_relative_to_full_data": {
+    "train": {
+      "largest_class_proportion_difference_pp": 0.0509,
+      "smallest_class_size": 607
+    },
+    "validation": {
+      "largest_class_proportion_difference_pp": 0.2332,
+      "smallest_class_size": 111
+    },
+    "test": {
+      "largest_class_proportion_difference_pp": 0.1966,
+      "smallest_class_size": 107
+    }
+  },
+  "test_group_cluster_bootstrap_95_percent_accuracy_CI_percent": [
+    89.1152,
+    90.2046
+  ],
+  "bootstrap_resamples": 1000,
+  "historical_model_selection_independence_proven": false,
+  "historical_row_id_membership_proven": false,
+  "external_clinical_validation": false,
+  "notes": [
+    "The previous 89.60% published accuracy used a different split. Accuracy differences are descriptive, not causal effects of grouping.",
+    "Identical feature vectors, including those with different disease labels, never cross train/validation/test.",
+    "Near-similar vectors (Hamming distance=1) may still cross partitions.",
+    "The class proportions and exact record split sizes can differ because GroupShuffleSplit partitions groups, not records.",
+    "The bootstrap CI accounts for test-side identical-vector clustering but not training variability or synthetic-data limitations.",
+    "Preselected 100 disease categories and feature representation came from the original study. No fresh external dataset was used."
+  ],
+  "sklearn_version": "1.8.0"
+}
